@@ -1,7 +1,7 @@
 multilingualizer.js
 ===================
 
-The simplest way to make a multilingual site with tiny javascript code.  
+The simplest way to make a multilingual site (=localization) with tiny javascript code.  
 
 ###How to use:
 load multilingualizer.js like
