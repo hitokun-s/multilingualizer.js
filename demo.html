@@ -4,17 +4,34 @@
         <title>multilingualizer.js</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="multilingualizer.js"></script>
         <script src="/js/google-tracking.js"></script>
+        <style>
+            div{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
     </head>
     <body>
-        <h1>[[en]]Demo page of multilingualizer.js[[ja]]multilingualizer.jsのデモ</h1>
-        <ul>
-            <li>oioi[[ja]]一番目[[en]]first</li>
-            <li>second[[ja]]二番目[[en]]second</li>
-        </ul>
-        <a href="?lang=ja">Japanese</a>
-        <a href="?lang=en">English</a>
+        <div class="container">
+            <h1>[[en]]Demo page of multilingualizer.js[[ja]]multilingualizer.jsのデモ</h1>
+            <ul>
+                <li>oioi[[ja]]一番目[[en]]first</li>
+                <li>second[[ja]]二番目[[en]]second</li>
+            </ul>
+            <div>
+                <div><strong>[[en]]Example1:[[ja]]例１：</strong><span>[[en]]set lang as URL param[[ja]]URLパラメータで言語指定</span></div>
+                <a class="btn btn-default" href="?lang=ja">Japanese</a>
+                <a class="btn btn-default" href="?lang=en">English</a>
+            </div>
+            <div>
+                <div><strong>[[en]]Example2:[[ja]]例２：</strong><span>[[en]]hold lang across pages(without URL param)(Recommend!)[[ja]]言語指定をメモリに保存する（おススメ！）</span></div>
+                <a class="btn btn-default" href="#" onclick="setLang('ja');">Japanese</a>
+                <a class="btn btn-default" href="#" onclick="setLang('en');">English</a>
+            </div>
+        </div>
     </body>
 </html>
