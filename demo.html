@@ -27,9 +27,14 @@
                 <a class="btn btn-default" href="?lang=en">English</a>
             </div>
             <div>
-                <div><strong>[[en]]Example2:[[ja]]例２：</strong><span>[[en]]hold lang across pages(without URL param)(Recommend!)[[ja]]言語指定をメモリに保存する（おススメ！）</span></div>
+                <div><strong>[[en]]Example2:[[ja]]例２：</strong><span>[[en]]hold lang across pages (with reload)[[ja]]言語指定をメモリに保存する（リロードあり）</span></div>
                 <a class="btn btn-default" href="#" onclick="setLang('ja');">Japanese</a>
                 <a class="btn btn-default" href="#" onclick="setLang('en');">English</a>
+            </div>
+            <div>
+                <div><strong>[[en]]Example3:[[ja]]例２：</strong><span>[[en]]hold lang across pages (without reload)[[ja]]言語指定をメモリに保存する（リロードなし）</span></div>
+                <div class="btn btn-default" onclick="setLang('ja');">Japanese</div>
+                <div class="btn btn-default" onclick="setLang('en');">English</div>
             </div>
         </div>
     </body>
