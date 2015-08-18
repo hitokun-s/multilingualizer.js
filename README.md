@@ -19,8 +19,8 @@ If you want to use any html in multilingual text, please use escaped html like t
 
 ```
 <div>
-   [[en]]email:&lt;a href=mailto:info@abovtime.com&gt;INFO@ABOVTIME.COM&lt;/a&gt;
-   [[ja]]Eメール：&lt;a href=mailto:info@abovtime.com&gt;INFO@ABOVTIME.COM&lt;/a&gt;
+   [[en]]email:&lt;a href=mailto:info@somedomain.com&gt;INFO@SOMEDOMAIN.COM&lt;/a&gt;
+   [[ja]]Eメール：&lt;a href=mailto:info@somedomain.com&gt;INFO@SOMEDOMAIN.COM&lt;/a&gt;
 </div>
 ```
 
