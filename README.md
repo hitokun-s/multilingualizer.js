@@ -30,7 +30,9 @@ If you want to use any html in multilingual text, please use escaped html like t
    ```
    http://[url]?key=value&lang=en
    ```
-###Can this library memorise the selected language after user leaves the page?
+
+###Can this library memorise the selected language after user leaves the page?  
+
 Yes. Once user choose a language, this library keeps it in memory(LocalStorage of HTML5).
 The selected language kept in memory is priored to URL parameter lang.
 
