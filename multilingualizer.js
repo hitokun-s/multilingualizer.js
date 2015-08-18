@@ -22,13 +22,15 @@ var setLang = function(lang){
 
 var applyLang = function(){
     globalDict.forEach(function(v){
-        $(v.elm).text(v.dict[user_lang]);
+        $(v.elm).html(v.dict[user_lang]);
     });
 }
 
 function textNodesUnder(el){
-  var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
-  while(n=walk.nextNode()) a.push(n);
+  var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_ALL,null,false);
+  while(n=walk.nextNode()){
+      a.push(n);
+  }
   return a;
 }
 
@@ -54,6 +56,3 @@ $(function(){
     });
     applyLang();
 });
-
-
-
