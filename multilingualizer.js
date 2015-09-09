@@ -43,6 +43,18 @@ $(function(){
     if(isStorageEnabled){
         localStorage.setItem('lang', user_lang);
     }
+
+    // bugfix for IE11
+    // if multilingual sentence is divided into sevaral text node, restore original text node
+    $("*").each(function(i,v){
+        if(LANG_REG_EXP.test($(this).text().replace(/\n/g,"")) && $(this).html().indexOf("<") == -1){
+            $(this).text($(this).text().replace(/\n/g,""));
+        }
+        var $v = $("#" + $(this).attr("id"));
+        if($v.length > 0 && LANG_REG_EXP.test($v.text().replace(/\n/g,"")) && $v.html().indexOf("<") == -1){
+            $v.text($v.text().replace(/\n/g,""));
+        }
+    })
     
     textNodesUnder(document).filter(function(v){
         return LANG_REG_EXP.test(v.nodeValue);
