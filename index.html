@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>multilingualizer.js</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/multilingualizer.css">
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="src/multilingualizer.js"></script>
+
+  <style>
+    div {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<div id="multilingualizer-loader" class="multilingualizer-spinner"></div>
+
+<a href="https://github.com/hitokun-s/multilingualizer.js">
+  <img style="position: absolute; top: 0; right: 0; border: 0;"
+       src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
+       alt="Fork me on GitHub"
+       data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+</a>
+
+<div id="multilingualizer-wrapper" class="multilingualizer-cloak">
+  <div class="container">
+    <h1>[[en]]Demo page of multilingualizer.js[[pt]]Página de demonstração de multilingualizer.js</h1>
+    <ul>
+      <li>this does not show up!!![[pt]]primeiro[[en]]first</li>
+      <li>oioioi[[pt]]segundo[[en]]second</li>
+    </ul>
+    <p>
+      [[en]]test for email address
+      [[pt]]teste para endereço de email
+    </p>
+
+    <div>
+      [[en]]email:&lt;a href=mailto:info@somedomain.com&gt;INFO@SOMEDOMAIN.COM&lt;/a&gt; contact me!
+      [[pt]]e-mail：&lt;a href=mailto:info@somedomain.com&gt;INFO@SOMEDOMAIN.COM&lt;/a&gt; contacte-me！
+    </div>
+
+    <div>
+      <div><strong>[[en]]Example 1:[[pt]]Exemplo 1：</strong><span>[[en]]Set lang as URL param[[pt]]Definir língua como parâmetro de URL</span>
+      </div>
+      <a class="btn btn-default" href="?lang=pt">Português</a>
+      <a class="btn btn-default" href="?lang=en">English</a>
+    </div>
+    <div>
+      <div><strong>[[en]]Example 2:[[pt]]Exemplo 2：</strong><span>[[en]]Hold lang across pages (without reload)[[pt]]Manter língua entre páginas (sem recarregar)</span>
+      </div>
+      <a class="btn btn-default" onclick="multilingualizer.setLang('pt');">Português</a>
+      <a class="btn btn-default" onclick="multilingualizer.setLang('en');">English</a>
+    </div>
+    <div>
+      <div><strong>[[en]]Example 3:[[pt]]Exemplo 3：</strong><span>[[en]]Hold lang across pages (with reload)[[pt]]Manter língua entre páginas (a recarregar)</span>
+      </div>
+      <a class="btn btn-default" href="#" onclick="multilingualizer.setLang('pt');">Português</a>
+      <a class="btn btn-default" href="#" onclick="multilingualizer.setLang('en');">English</a>
+    </div>
+    <div>
+      <div><strong>[[en]]Example 4:[[pt]]Exemplo 4：</strong><span>[[en]]Rendering a 10000 elements list[[pt]]Renderizar uma lista de 10000 elementos</span>
+      </div>
+      <div id="rendered-list"></div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var html = '<ul>';
+        for (var i = 0; i < 10000; i++) {
+          html += '<li>[[en]]Testing a huge list rendering: ' + i + '[[pt]]A testar uma lista enorme: ' + i + '</li>';
+        }
+        html += '</ul>';
+
+        $('#rendered-list').html(html);
+        multilingualizer.apply();
+      });
+    </script>
+  </div>
+</div>
+</body>
+</html>
