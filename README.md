@@ -7,7 +7,7 @@ The simplest way to make a multilingual site (=localization) with tiny javascrip
 ###Intallation & Usage:
 Clone the repo and load it:
 
-```<script src="multilingualizer.js/dist/multilingualizer.min.js"></script>``` and ```<link rel="stylesheet" href="multilingualizer.js/dist/multilingualizer.mincss">```.
+```<script src="multilingualizer.js/dist/multilingualizer.min.js"></script>``` and ```<link rel="stylesheet" href="multilingualizer.js/dist/multilingualizer.min.css">```.
 
 
 Now, write multilingual text:
@@ -47,10 +47,7 @@ The selected language kept in memory is priored to URL parameter lang.
 
 ###How do I hide the initial rendering of the content that shows the full untranslated text?
 
-Simple, add the your content inside ```<div id="multilingualizer-wrapper" class="multilingualizer-cloak">...content...</div>```.
-The content's opacity will be set to 0 until the translation is rendered.
-Optionally, you can add a loader by including ```<div id="multilingualizer-loader" class="multilingualizer-spinner"></div>``` outside
-the wrapper and it will show a css loader while the translation is redered.
+Simple, add a loader by including ```<div id="multilingualizer-loader"></div>``` anywhere on your HTML.
 
 ###How do I change the language programmatically?
 
@@ -61,7 +58,7 @@ There are 3 ways;
 
 ###Can I disable the loader?
 
-In case you want to disable the loader for a specific call, and hav added the loader div to the page, you can pass a ```removeCloak``` parameter
+In case you want to disable the loader for a specific call, and have added the loader div to the page, you can pass a ```removeCloak``` parameter
 on the setLang() method, such as: ```multilingualizer.setLang('en', true)```
 
 ###Can load more content after the translation has been rendered?

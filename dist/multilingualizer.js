@@ -45,14 +45,23 @@
 
     // Move this to the end of the stack, so it only removes the class after the content is rendered
     setTimeout(function () {
-      $('#multilingualizer-loader').removeClass('multilingualizer-spinner');
-      $('#multilingualizer-wrapper').removeClass('multilingualizer-cloak');
+      removeCloak();
     }, 0);
   };
 
+  var customCloakCSS = function (boolean) {
+    return {
+      'opacity': boolean ? 1 : 0,
+      'z-index': boolean ? 9999 : -1
+    }
+  };
+
+  function removeCloak() {
+    $('#multilingualizer-loader').css(customCloakCSS(false));
+  }
+
   function addCloak() {
-    $('#multilingualizer-wrapper').addClass('multilingualizer-cloak');
-    $('#multilingualizer-loader').addClass('multilingualizer-spinner');
+    $('#multilingualizer-loader').css(customCloakCSS(true));
   }
 
   function textNodesUnder(el) {
@@ -149,6 +158,8 @@
       addCloak();
     }
 
-    getNodesToTranslate();
+    setTimeout(function () {
+      getNodesToTranslate();
+    }, 0);
   };
 })();
