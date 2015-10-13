@@ -1,0 +1,47 @@
+{
+  "name": "multilingualizer.js",
+  "version": "0.0.1",
+  "description": "Add multi language to any project",
+  "main": [
+    "./dist/multilingualizer.js",
+    "./dist/multilingualizer.css"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fgarci03/multilingualizer.js"
+  },
+  "keywords": [
+    "multi",
+    "language",
+    "internationalization",
+    "i18n"
+  ],
+  "author": "hitokun-s",
+  "contributors": [
+    "fgarci03"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fgarci03/multilingualizer.js/issues"
+  },
+  "homepage": "https://fgarci03.github.io/multilingualizer.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "autoprefixer-core": "^5.2.1",
+    "cssnano": "^2.2.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.5.5",
+    "jshint-stylish": "^2.0.1",
+    "load-grunt-tasks": "^3.2.0",
+    "pixrem": "^1.3.1"
+  }
+}

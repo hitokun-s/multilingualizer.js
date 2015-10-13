@@ -1,0 +1,33 @@
+{
+  "name": "multilingualizer.js",
+  "version": "0.0.1",
+  "homepage": "https://fgarci03.github.io/multilingualizer.js",
+  "authors": [
+    "Hitokun <jgpuauno+github@gmail.com>",
+    "Filipe Garcia <garcia.filipeandre@gmail.com>"
+  ],
+  "description": "Add multi language to any project",
+  "main": [
+    "./dist/multilingualizer.js",
+    "./dist/multilingualizer.css"
+  ],
+  "appPath": "./src",
+  "moduleType": [],
+  "keywords": [
+    "multi",
+    "language",
+    "internationalization",
+    "i18n"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

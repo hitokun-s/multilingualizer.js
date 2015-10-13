@@ -1,0 +1,36 @@
+#multilingualizer-loader {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin: 0;
+  transition: opacity 0.2s linear;
+}
+#multilingualizer-loader:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+#multilingualizer-loader:not(:required):before {
+  content: '';
+  border-radius: 50%;
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  border-top-color: rgba(0, 0, 0, 0.6);
+  animation: ml-spinner 0.6s linear infinite;
+  -webkit-animation: ml-spinner 0.6s linear infinite;
+}
+@keyframes ml-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes ml-spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
