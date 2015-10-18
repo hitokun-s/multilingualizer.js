@@ -58,8 +58,7 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          './index.html',
-          //'<%= home.app %>/{,*/}*.js'
+          './index.html'
         ]
       }
     },

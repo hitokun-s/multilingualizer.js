@@ -1,13 +1,15 @@
 multilingualizer.js
 ===================
 
-Originally forked from [https://github.com/hitokun-s/multilingualizer.js](https://github.com/hitokun-s/multilingualizer.js).
 The simplest way to make a multilingual site (=localization) with tiny javascript code.  
 
 ###Intallation & Usage:
 Clone the repo and load it:
 
 ```<script src="multilingualizer.js/dist/multilingualizer.min.js"></script>``` and ```<link rel="stylesheet" href="multilingualizer.js/dist/multilingualizer.min.css">```.
+
+
+**Bower**: ```bower install multilingualizer.js```
 
 
 Now, write multilingual text:
@@ -58,19 +60,19 @@ There are 3 ways;
 
 ###Can I disable the loader?
 
-In case you want to disable the loader for a specific call, and have added the loader div to the page, you can pass a ```removeCloak``` parameter
-on the setLang() method, such as: ```multilingualizer.setLang('en', true)```
+In case you want to disable the loader for a specific call, and have added the loader div to the page, you can pass a ```removeCloak``` boolean parameter
+on the setLang('language', removeCloak) method, such as: ```multilingualizer.setLang('en', true)```
 
 ###Can load more content after the translation has been rendered?
 
-Yes! Because of performance issues, it's not a good idea to watch the whole page for changes. But you can use ```multilingualizer.apply(removeCloak)```
-after the new content call and it will handle it.
+Yes! Because of performance issues, it's not a good idea to watch the whole page for changes. But you can use ```multilingualizer.apply()``` with the
+optional removeCloak boolean as parameter after the new content call and it will handle it.
 
 ###Demo:  
-[http://fgarci03.github.io/multilingualizer.js](http://fgarci03.github.io/multilingualizer.js)
+[https://hitokun-s.github.io/multilingualizer.js](https://hitokun-s.github.io/multilingualizer.js)
 
 
 ###TODO:  
-+ Add to bower;
 + Allow defining another default language
 + Allow ```multilingualizer.apply()``` to render specific elements instead of the whole page
++ Add unit tests
